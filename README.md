@@ -4,12 +4,12 @@
 docker-compose up -d
 ```
 containers' IPs:
-zookeeper :        172.17.0.2
-kafka :            172.17.0.3
-tomcat(sesame) :   172.17.0.4
-storm-nimbus :     172.17.0.5
-storm-supervisor : 172.17.0.6
-storm-ui :         172.17.0.7
+zookeeper :        172.17.0.2<br/>
+kafka :            172.17.0.3<br/>
+tomcat(sesame) :   172.17.0.4<br/>
+storm-nimbus :     172.17.0.5<br/>
+storm-supervisor : 172.17.0.6<br/>
+storm-ui :         172.17.0.7<br/>
 
 start redis
 ```
@@ -25,6 +25,6 @@ docker exec -it waves_nimbus_1 curl http://172.17.0.4:8080
 
 docker exec -it waves_nimbus_1 curl http://172.17.0.4:8080/openrdf-workbench/repositories/waves/export
 ```
-sesame page: http://localhost:8080/openrdf-workbench
+sesame page: http://localhost:8080/openrdf-workbench<br/>
 storm UI: http://localhost:49080
 
