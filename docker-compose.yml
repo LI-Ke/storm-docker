@@ -38,7 +38,6 @@ nimbus:
     - 49773:3773
     - 49772:3772
     - 49627:6627
-    - 6379:6379
     - 22
   links: 
     - zookeeper:zk
@@ -49,6 +48,7 @@ supervisor:
   command: /usr/bin/start-supervisor.sh 
   ports:
     - 8000
+    - 6379:6379
     - 22
   links: 
     - nimbus:nimbus
