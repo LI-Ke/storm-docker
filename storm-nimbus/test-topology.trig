@@ -16,10 +16,10 @@
 	# ZooKeeper configuration (not to use Storm default ZooKeeper server)
 	# Note: This property is required when using Storm Kafka spout that
 	#       discovers Kafka servers through their ZooKeeper registration.
-	#waves:zookeeperHosts	"localhost:2181" ;
+	waves:zookeeperHosts	"172.17.0.2:2181" ;
 
 	# Global Redis database
-	#waves:redisHost	"localhost:6379" ;
+	waves:redisHost	"172.17.0.6:6379" ;
 
 	# Waves shifted and accelerated system clock configuration.
 	waves:clock	[
@@ -116,7 +116,7 @@
 	# Kafka producer to inject test events into the Kafka topic.
 	#rdfs:label 		"S-1i.kafka" ;
 	waves:installation	<installation> ;
-	waves:inputFolder	"srcFolder" ;
+	waves:inputFolder	"/usr/local/srcFolder" ;
 	waves:inputPattern	".n3$" ;
 	waves:eventRate		"PT2S"^^xsd:duration ;
 	waves:numTasks		"4"^^xsd:int .
