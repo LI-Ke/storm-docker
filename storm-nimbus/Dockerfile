@@ -33,15 +33,6 @@ RUN chmod a+x /usr/bin/start-supervisor.sh
 
 RUN echo [supervisord] | tee -a /etc/supervisor/supervisord.conf ; echo nodaemon=true | tee -a /etc/supervisor/supervisord.conf
 
-RUN apt-get update && apt-get install make && apt-get install -y gcc 
-
-# Install redis
-RUN wget http://download.redis.io/releases/redis-3.0.5.tar.gz && \
-    tar xzf redis-3.0.5.tar.gz && \
-    mv redis-3.0.5 /usr/local/redis && \
-    rm redis-3.0.5.tar.gz && \
-    cd /usr/local/redis && \
-    make 
 
 RUN mkdir /usr/local/srcFolder
 ADD waves-storm-0.2.0-SNAPSHOT.jar /usr/local/
@@ -55,4 +46,3 @@ EXPOSE 6627
 EXPOSE 3772
 EXPOSE 3773
 EXPOSE 6379
-
